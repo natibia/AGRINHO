@@ -1,29 +1,343 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/*
+* [Page 1] Header
+*/
 header {
-    background-color: thistle;
+    display: flex;
+    justify-content: center;
+    border-bottom-style: solid;
+    border-bottom-color: #E3E3E3;
+    border-bottom-width: 1px;
+}
+
+header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 1420px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
-section{
+ header > div > span {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.div1 {
     display: flex;
+    flex-direction: row;
+    gap: 19px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.hidden__mobile {
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+/*
+* [Page 1] Main
+*/
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main > div {
+    width: 1420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -6.3px;
+    color: #171717;
+    margin-top: 36px;
+    text-align: center;
+}
+
+.op__container {
+    margin-top: 240px;
+    width: 100%;
+    height: 30px;
+    overflow-x: scroll;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.op__container::-webkit-scrollbar {
+    display: none;
+}
+
+.op__container > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+}
+
+.op__container > div > :nth-child(1) {
+    background-color: #171717;
+}
+
+.op__container > div > :nth-child(1) > span {
+    color: #FFF;
+}
+
+.op__button {
+    background-color: #e8e8e8;
+    padding: 3px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    
+}
+
+.op__button > span {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #171717;
+    text-wrap: nowrap;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin-top: 54px;
+    margin-bottom: 54px;
+    background-color: #E3E3E3;
+}
+
+.post__container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 300px;
+}
+
+.post {
+    max-width: 460px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E4E4E4;
+
+    @media (max-width: 800px) {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.post__header {
+    background-color: aqua;
+    width: 100%;
+    height: 278px;
+    overflow: hidden;
+    position: relative;
+}
+
+.post__header > div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+}
+
+.post__header > img {
+    width: 100%;
+}
+
+.post__info {
+    padding-top: 20px;
+    padding-bottom: 42px;
+    padding-left: 46px;
+    padding-right: 46px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post__info > h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #171717;
+    margin-bottom: 106px;
+}
+
+.post__info > :nth-child(2) {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #171717;
+    opacity: 56%;
+}
+
+.post__info > :nth-child(3){
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+    color: #171717;
+}
+
+/*
+* [Page 1] Footer
+*/
+
+footer {
+    background-color: #1B1919;
+    display: flex;
+    justify-content: center;
+}
+
+footer > div {
+    width: 1420px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0px;
+    gap: 380px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.footer__text {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #FFF;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 314px;
+}
+
+.footer__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+/*
+* [Page 2] Display
+*/
+
+.display__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
-    background-color: black;
-    color: white;
-    margin: 10px 0;
-    padding: 10px 20px;
+    padding-top: 50px;
+    padding-bottom: 95px;
 }
 
-div{
-    padding: 30px;
+.display__container > span{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #171717;
 }
 
-h4 {
-    font-size: 2vw;
+.display__container > :nth-child(2) {
+    margin-top: 0px;
+    
+    @media (max-width: 500px) {
+        font-size: 70px;
+    }
+}
+
+.display__img {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+
+    @media (max-width: 930px) {
+        height: auto;
+    }
+}
+
+.display__img > img {
+    width: 100%;
+    transform: translateY(-20%);
+
+    @media (max-width: 1270px) {
+        transform: scale(1.2);  
+    }
+}
+
+.display__body {
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 360px;
+    padding-bottom: 200px;
+
+    @media (max-width: 970px) {
+        padding-left: 0px;
+    }
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #171717;
+    margin-top: 154px;
+    margin-bottom: 20px;
+}
+
+.display__body > :nth-child(1) {
+    margin-top: 0px;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #171717;
+    text-align: justify;
 }
